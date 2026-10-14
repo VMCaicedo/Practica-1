@@ -1,9 +1,12 @@
-html {
-    height: 100%;
-    width: 100%;
-  }
 
-/* Configuración general */
+/* Paleta de colores:
+   Verde oscuro: #123524
+   Verde medio:  #286044
+   Verde claro:  #d4ed91
+   Fondo:        #f2f4f1
+   Texto:        #222222
+*/
+
 * {
     box-sizing: border-box;
 }
@@ -12,52 +15,70 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #f2f4f1;
-    color: #222;
+    color: #222222;
     line-height: 1.6;
 }
 
-/* Barra de navegación */
+/* Barra de navegación Bootstrap */
 .navbar {
     background-color: #123524;
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    padding: 18px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
 }
 
-.navbar a {
-    color: white;
-    text-decoration: none;
+.navbar .navbar-brand {
+    color: #ffffff;
+}
+
+.navbar .nav-link {
+    color: #ffffff;
     font-weight: bold;
+    margin-left: 10px;
 }
 
-.navbar a:hover {
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
     color: #d4ed91;
 }
 
+/* Distribución general de las páginas */
+.page-container {
+    padding: 30px 24px;
+    min-height: 65vh;
+}
+
 /* Contenido principal */
-main {
-    max-width: 1000px;
-    margin: 30px auto;
+.content-card {
+    background-color: #ffffff;
     padding: 30px;
-    background-color: white;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    height: 100%;
 }
 
 h1 {
     color: #123524;
-    font-size: 42px;
+    font-size: 2.5rem;
     text-align: center;
+    margin-bottom: 24px;
 }
 
 h2 {
     color: #286044;
+    font-size: 1.5rem;
+    margin-top: 22px;
+    margin-bottom: 12px;
 }
 
+h3 {
+    color: #286044;
+    font-size: 1.25rem;
+    margin-top: 22px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* Imagen de la página de inicio */
 .football-image {
     display: block;
     width: 100%;
@@ -67,44 +88,72 @@ h2 {
     margin: 25px auto;
 }
 
-li {
-    margin-bottom: 8px;
+/* Columnas laterales para publicidad y noticias */
+.sidebar {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #d4ed91;
+    min-height: 180px;
+}
+
+.sidebar h2 {
+    font-size: 1.2rem;
+    margin-top: 0;
+}
+
+/* Botón del formulario */
+.btn-football {
+    background-color: #123524;
+    color: #ffffff;
+    border: 1px solid #123524;
+    font-weight: bold;
+}
+
+.btn-football:hover {
+    background-color: #286044;
+    border-color: #286044;
+    color: #ffffff;
+}
+
+/* Campos del formulario */
+.form-control:focus {
+    border-color: #286044;
+    box-shadow: 0 0 0 0.2rem rgba(40, 96, 68, 0.2);
 }
 
 /* Pie de página */
 .footer {
     background-color: #123524;
-    color: white;
+    color: #ffffff;
     text-align: center;
     padding: 20px;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 .footer p {
     margin: 5px;
 }
 
-/* Adaptación a pantallas pequeñas */
-@media (max-width: 600px) {
-    .navbar {
-        gap: 15px;
-        padding: 15px 8px;
+/* Ajustes para dispositivos pequeños */
+@media (max-width: 767.98px) {
+    .page-container {
+        padding: 18px 12px;
     }
 
-    main {
-        margin: 15px;
+    .content-card {
         padding: 20px;
     }
 
     h1 {
-        font-size: 32px;
+        font-size: 2rem;
+    }
+
+    .navbar .nav-link {
+        margin-left: 0;
+    }
+
+    .football-image {
+        max-height: 300px;
     }
 }
-
-.footer {
-    background-color: #123524;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
